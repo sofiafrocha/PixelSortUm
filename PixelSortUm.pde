@@ -43,18 +43,10 @@ void glitch(){
 
 	//comprimento do array pixels[], que contêm os pixeis da imagem
 	float len = photo.width * photo.height;
-	//altura e largura do risco
-	//caso seja na horizontal
-	if (photo.width > photo.height) {
-		altura = random(10, 81);
-		largura = 2;
-	}
 	
-	//caso seja na vertical ou quadrado
-	else {
-		altura = random(10, 81);
-		largura = 2;
-	}
+	//altura e largura do risco
+	altura = random(photo.height/100, photo.height/13);
+	largura = 2;
 
 	//escolhe um pixel ao acaso, desde que se consiga desenhar o risco (haja espaço)
 	//+ largura e - largura, para assegurar que quando as barras são muito largas
